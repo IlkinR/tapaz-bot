@@ -19,7 +19,8 @@ class ProductParser:
     def _get_price(self) -> int:
         price_tag = self.soup.find('span', class_='price-val')
         price = price_tag.text.replace(' ', '')
-        return int(price)
+        price = int(price)
+        return price
 
     def _get_phone(self) -> str:
         phone_tag = self.soup.find('a', class_='shop-phones--number')
