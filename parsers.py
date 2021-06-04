@@ -7,6 +7,8 @@ Location = namedtuple('Location', ['url', 'name'])
 
 
 class ProductParser:
+    """ Class for parsing data from tap.az """
+
     def __init__(self, advert_url: str) -> None:
         self.advert_url = advert_url
         self.soup = get_soup(self.advert_url)
